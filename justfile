@@ -1,4 +1,4 @@
-name := 'cosmic-randr'
+name := 'wmde-randr'
 rootdir := ''
 prefix := '/usr'
 
