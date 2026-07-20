@@ -266,18 +266,18 @@ impl Display for AdaptiveSyncAvailability {
 
 #[derive(thiserror::Error, Debug)]
 pub enum Error {
-    #[error("`cosmic-randr` KDL format error")]
+    #[error("`wmde-randr` KDL format error")]
     Kdl(#[from] KdlError),
-    #[error("could not exec `cosmic-randr`")]
+    #[error("could not exec `wmde-randr`")]
     Spawn(#[source] std::io::Error),
-    #[error("`cosmic-randr` output not UTF-8")]
+    #[error("`wmde-randr` output not UTF-8")]
     Utf(#[from] std::str::Utf8Error),
 }
 
 #[allow(clippy::too_many_lines)]
 pub async fn list() -> Result<List, Error> {
-    // Get a list of outputs from `cosmic-randr` in KDL format.
-    let stdout = std::process::Command::new("cosmic-randr")
+    // Get a list of outputs from `wmde-randr` in KDL format.
+    let stdout = std::process::Command::new("wmde-randr")
         .args(["list", "--kdl"])
         .stdin(std::process::Stdio::null())
         .stdout(std::process::Stdio::piped())
