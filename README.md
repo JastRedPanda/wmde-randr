@@ -1,12 +1,17 @@
-# cosmic-randr
+# WMDE RandR
 
-COSMIC RandR is both a library and command line utility for displaying and configuring Wayland outputs. Each display is represented as an "output head", whereas all supported configurations for each display is represented as "output modes".
+WMDE RandR is both a library and command line utility for displaying and configuring Wayland outputs. Each display is represented as an "output head", whereas all supported configurations for each display is represented as "output modes".
 
-## cosmic-randr cli
+It is part of the [WMDE desktop](https://wmde.fun) and is a fork of
+[pop-os/cosmic-randr](https://github.com/pop-os/cosmic-randr) by System76, rebranded for WMDE.
+Original authorship and copyright are retained. The crates keep their upstream `cosmic-randr`
+names so that syncing with upstream stays cheap; only the installed binary is renamed.
 
-All COSMIC installations have `cosmic-randr` preinstalled on the system. This can be used to list and configure outputs from the terminal.
+## wmde-randr cli
 
-Those that want to integrate with this binary in their software can use `cosmic-randr list --kdl` to get a list of outputs and their modes in the [KDL syntax format](https://kdl.dev). Rust developers can use the `cosmic-randr-shell` crate provided here for the same integration.
+All WMDE installations have `wmde-randr` preinstalled on the system. This can be used to list and configure outputs from the terminal.
+
+Those that want to integrate with this binary in their software can use `wmde-randr list --kdl` to get a list of outputs and their modes in the [KDL syntax format](https://kdl.dev). Rust developers can use the `cosmic-randr-shell` crate provided here for the same integration.
 
 ## License
 
